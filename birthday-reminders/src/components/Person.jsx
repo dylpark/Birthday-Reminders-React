@@ -5,10 +5,12 @@ function Person(props) {
   return (
     <div>
       <div></div>
-      <div className="Details">
-        <h2 className="Name">{props.name}</h2>
-        <p className="Age">{props.age} years</p>
+      <div className="Person">
         <ProfilePic img={props.img} />
+        <div>
+          <h2 className="Name">{props.name}</h2>
+          <p className="Age">{props.age} years</p>
+        </div>
       </div>
     </div>
   );

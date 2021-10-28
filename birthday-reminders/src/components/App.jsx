@@ -19,7 +19,9 @@ function App() {
     <div className="App">
       <header class="App-Header"></header>
       <div class="Column-One"></div>
-      <div class="Card-Container">{contacts.map(loadContacts)}</div>
+      <div class="Column-Two">
+        <div class="Card-Container">{contacts.map(loadContacts)}</div>
+      </div>
       <div class="Column-Three"></div>
       <footer className="App-Footer"></footer>
     </div>

@@ -1,11 +1,11 @@
 :root {
   --main-radius: 5px;
   --main-padding: 5px;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 body {
-  background-color: #f28ae6;
-  line-height: 1.5;
+  background-color: pink;
 }
 
 .App {
@@ -25,41 +25,47 @@ body {
   grid-area: Column-One;
 }
 
-.Circle-Avatar {
-  border-radius: 50%;
-  border: 7px solid rgb(180, 180, 180);
-  width: 120px;
-  height: 120px;
+.Column-Two {
+  grid-area: Column-Two;
 }
 
-.Details {
+.Card-Container {
+  background-color: white;
+  height: auto;
+  margin: 5rem 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--main-radius);
+  box-shadow: var(--dark-shadow);
+}
+
+.Circle-Avatar {
+  border-radius: 50%;
+  border: 2px solid rgb(180, 180, 180);
+  width: 75px;
+  height: 75px;
+}
+
+.Person {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   align-items: center;
 }
 
 .Name {
-  font-size: 2em;
-  color: #212121;
-  display: flex;
-  flex: 1;
-  margin: 10% 20px 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #102a42;
 }
 
 .Age {
-  margin: 20px 0;
-  color: #565656;
-}
-
-.Card-Container {
-  background-color: pink;
-  grid-area: Column-Two;
-  justify-content: start;
-  background-color: white;
-  border-radius: var(--main-radius);
-  box-shadow: 5px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #617d98;
 }
 
 .Column-Three {
