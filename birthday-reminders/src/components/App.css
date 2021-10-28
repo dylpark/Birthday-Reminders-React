@@ -1,46 +1,60 @@
-body {
-  background-color: pink;
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
 
-.Card-Background {
-  background-color: white;
+body {
+  background-color: pink;
+  line-height: 1.5;
 }
 
 .App {
   text-align: center;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  grid-template-areas:
+    "App-header App-header App-header"
+    "Column-One Column-Two Column-Three"
+    "App-footer App-footer App-footer";
+  grid-gap: 0.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Column-One {
+  grid-area: Column-One;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Card-Container {
+  background-color: pink;
+  grid-area: Column-Two;
+  justify-content: start;
+  background-color: white;
+  border-radius: var(--main-radius);
+  box-shadow: 5px;
+}
+
+.Column-Three {
+  grid-area: Column-Three;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-area: App-header;
 }
 
-.App-link {
-  color: #61dafb;
+.App-footer {
+  grid-area: App-footer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 900px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0fr 1fr 0fr 0.1fr;
+    grid-template-areas:
+      "App-header"
+      "Column-One"
+      "Column-Two"
+      "Column-Three"
+      "App-footer";
   }
 }
