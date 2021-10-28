@@ -9,7 +9,7 @@ const loadContacts = (contacts) => {
       id={contacts.id}
       name={contacts.name}
       age={contacts.age}
-      img={contacts.image}
+      img={contacts.imgURL}
     />
   );
 };

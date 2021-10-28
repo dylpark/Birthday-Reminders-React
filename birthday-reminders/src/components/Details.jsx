@@ -5,9 +5,9 @@ function Details(props) {
   return (
     <div>
       <div></div>
-      <div>
-        <h2 className="name">{props.name}</h2>
-        <p className="age">{props.age}</p>
+      <div className="Details">
+        <h2 className="Name">{props.name}</h2>
+        <p className="Age">{props.age}</p>
         <Avatar img={props.img} />
       </div>
     </div>
