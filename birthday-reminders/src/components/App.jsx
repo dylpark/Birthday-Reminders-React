@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Details from "./Details";
+import Person from "./Person";
 import contacts from "../contacts";
 
 const loadContacts = (contacts) => {
   return (
-    <Details
+    <Person
       id={contacts.id}
       name={contacts.name}
       age={contacts.age}
@@ -17,15 +17,11 @@ const loadContacts = (contacts) => {
 function App() {
   return (
     <div className="App">
-      <header class="App-header"></header>
+      <header class="App-Header"></header>
       <div class="Column-One"></div>
-
-      <div class="Card-Container">
-        Card Container
-        {contacts.map(loadContacts)}
-      </div>
+      <div class="Card-Container">{contacts.map(loadContacts)}</div>
       <div class="Column-Three"></div>
-      <footer className="App-footer"></footer>
+      <footer className="App-Footer"></footer>
     </div>
   );
 }
