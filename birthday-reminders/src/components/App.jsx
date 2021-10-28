@@ -1,6 +1,18 @@
+import React from "react";
 import "./App.css";
 import Details from "./Details";
-import Avatar from "./Avatar";
+import contacts from "../contacts";
+
+const loadContacts = (contacts) => {
+  return (
+    <Details
+      id={contacts.id}
+      name={contacts.name}
+      age={contacts.age}
+      img={contacts.image}
+    />
+  );
+};
 
 function App() {
   return (
@@ -10,10 +22,8 @@ function App() {
 
       <div class="Card-Container">
         Card Container
-        <Details name="Dylan" age="20" />
-        <Avatar img="" />
+        {contacts.map(loadContacts)}
       </div>
-
       <div class="Column-Three"></div>
       <footer className="App-footer"></footer>
     </div>
