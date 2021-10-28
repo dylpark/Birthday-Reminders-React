@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: pink;
+  background-color: #f28ae6;
   line-height: 1.5;
 }
 
@@ -25,11 +25,32 @@ body {
   grid-area: Column-One;
 }
 
-.Circle-avatar {
+.Circle-Avatar {
   border-radius: 50%;
-  border: 7px solid #fff;
+  border: 7px solid rgb(180, 180, 180);
   width: 120px;
   height: 120px;
+}
+
+.Details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.Name {
+  font-size: 2em;
+  color: #212121;
+  display: flex;
+  flex: 1;
+  margin: 10% 20px 0;
+}
+
+.Age {
+  margin: 20px 0;
+  color: #565656;
 }
 
 .Card-Container {
@@ -45,11 +66,11 @@ body {
   grid-area: Column-Three;
 }
 
-.App-header {
+.App-Header {
   grid-area: App-header;
 }
 
-.App-footer {
+.App-Footer {
   grid-area: App-footer;
 }
 
